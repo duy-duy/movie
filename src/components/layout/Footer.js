@@ -7,9 +7,12 @@ const Footer = () => {
         <div className="">
           <img src="./img/logo.png" alt="" className="w-32 h-32 object-container m-auto mb-6" />
           <p className="tracking-widest">
-            Copyright 2021 © <a href="/">The Movies</a> Xem phim mới miễn phí nhanh chất lượng cao.
-            Xem Phim online Việt Sub, Thuyết minh, lồng tiếng chất lượng HD. Xem phim nhanh online
-            chất lượng cao
+            Copyright 2021 ©{" "}
+            <a href="/" className="text-primary">
+              The Movies
+            </a>{" "}
+            Xem phim mới miễn phí nhanh chất lượng cao. Xem Phim online Việt Sub, Thuyết minh, lồng
+            tiếng chất lượng HD. Xem phim nhanh online chất lượng cao
           </p>
         </div>
         <div className="cursor-pointer">

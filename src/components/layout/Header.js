@@ -36,8 +36,8 @@ const Header = () => {
             </div>
             {/* <span>Thể loại</span> */}
             <div className="flex gap-x-6 uppercase header-info">
-              <span>Đăng nhập</span>
-              <span>Đăng ký</span>
+              <span className="cursor-pointer">Đăng nhập</span>
+              <span className="cursor-pointer">Đăng ký</span>
             </div>
           </div>
           {/* <div className="flex gap-x-6 uppercase header-hidden">

@@ -5,6 +5,7 @@ import { fetcher, tmdbAPI } from "../config";
 import useDebounce from "../hooks/useDebounce";
 import ReactPaginate from "react-paginate";
 import { v4 } from "uuid";
+import LoadMore from "../components/loading/LoadMore";
 
 const itemsPerPage = 20;
 const MoviePage = () => {
@@ -96,6 +97,8 @@ const MoviePage = () => {
           className="pagination"
         />
       </div>
+
+      <LoadMore url={url} movies={movies}></LoadMore>
     </div>
   );
 };
