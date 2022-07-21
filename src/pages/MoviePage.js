@@ -39,7 +39,7 @@ const MoviePage = () => {
   };
 
   return (
-    <div className="container m-auto mt-[150px] ">
+    <div className="container m-auto mt-[150px] movie-all">
       <div className="flex mb-10">
         <div className="flex-1">
           <input
@@ -68,13 +68,13 @@ const MoviePage = () => {
       </div>
 
       {loading && (
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid grid-cols-4 gap-10 movies-list">
           {new Array(itemsPerPage).fill(0).map(() => (
             <MovieCardSkeleton key={v4()}></MovieCardSkeleton>
           ))}
         </div>
       )}
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid grid-cols-4 gap-10 movies-list">
         {!loading &&
           movies.length > 0 &&
           movies.map((item) => (
@@ -84,7 +84,7 @@ const MoviePage = () => {
           ))}
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 movie-navigation">
         <ReactPaginate
           breakLabel="..."
           nextLabel="next >"

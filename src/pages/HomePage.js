@@ -5,9 +5,9 @@ import MovieList from "../components/movie/MovieList";
 const HomePage = () => {
   return (
     <Fragment>
-      <div className="container mx-auto mt-[150px]">
+      <div className="container mx-auto mt-[150px] banner">
         {/* banner */}
-        <section className="h-[500px] banner mb-20">
+        <section className="h-[500px] mb-20">
           <BannerList></BannerList>
         </section>
 

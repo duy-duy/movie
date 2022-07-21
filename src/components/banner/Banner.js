@@ -23,11 +23,14 @@ const Banner = ({ item }) => {
       />
       <div className="absolute left-5 bottom-5 w-full banner-content text-white">
         <h2 className="font-bold text-3xl mb-5">{title}</h2>
-        <div key={item.id} className="flex items-center gap-x-3 mb-8">
+        <div key={item.id} className="flex items-center gap-x-3 mb-8 banner-category">
           {genres.length > 0 &&
             genres.map((item) =>
               genre_ids.includes(item.id) ? (
-                <span key={item.id} className="py-2 px-4 border border-white roude">
+                <span
+                  key={item.id}
+                  className="py-2 px-4 border border-white rounded-lg banner-category-item"
+                >
                   {item.name}
                 </span>
               ) : (

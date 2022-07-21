@@ -13,7 +13,7 @@ const MovieDetailPage = () => {
   return (
     <div className="pb-10">
       <div className="mt-[70px] container m-auto"></div>
-      <div className="w-full h-[600px] relative">
+      <div className="w-full h-[600px] relative movie-backdrop">
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         <div
           className="w-full h-full bg-cover bg-no-repeat"
@@ -22,7 +22,7 @@ const MovieDetailPage = () => {
           }}
         ></div>
       </div>
-      <div className="h-[400px] max-w-[800px] m-auto -mt-[200px] relative z-10 pb-10">
+      <div className="h-[400px] max-w-[800px] m-auto -mt-[200px] relative z-10 pb-10 movie-background">
         <img
           // src={`https://image.tmdb.org/t/p/original/${poster_path}`}
           src={tmdbAPI.image(poster_path, "original")}
@@ -32,7 +32,7 @@ const MovieDetailPage = () => {
       </div>
       <h1 className="text-center text-4xl font-bold text-white mb-10">{title}</h1>
       {genres.length > 0 && (
-        <div className="flex items-center gap-x-5 mb-10 justify-center">
+        <div className="flex items-center gap-x-5 mb-10 justify-center move-category">
           {genres.map((item) => (
             <span className="py-2 px-4 border-primary text-primary border rounded" key={item.id}>
               {item.name}
@@ -56,9 +56,9 @@ function MovieData({ type = "videos" }) {
     const { cast } = data;
     if (!cast || cast.length <= 0) return null;
     return (
-      <div className="py-10">
+      <div className="py-10 cast">
         <h2 className="text-center text-3xl mb-4">Diễn viên</h2>
-        <div className="grid grid-cols-4 gap-5 container m-auto">
+        <div className="grid grid-cols-4 gap-5 container m-auto cast-container">
           {cast.slice(0, 4).map((item) => (
             <div className="cast-item" key={item.id}>
               <img
@@ -77,7 +77,7 @@ function MovieData({ type = "videos" }) {
     if (!results || results.length <= 0) return null;
     if (type === "videos") {
       return (
-        <div className="py-10">
+        <div className="py-16">
           <div className="flex flex-col gap-5 container m-auto">
             {results.slice(0, 1).map((item) => (
               <div className="w-full" key={item.id}>
